@@ -18,7 +18,7 @@ int main() {
     std::cin >> n;
     n = n % 26;
     string s = "hello";
-    getline(cin, s);
+    cin >> s;
     std::cout << encrypt(n, s) << std::endl;
     return 0;
 }
