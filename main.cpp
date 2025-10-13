@@ -1,10 +1,24 @@
-// Created by aach on 03.10.2025.
-#include "main.h"
+#include <string>
 #include <iostream>
+using namespace std;
 
-int main(){
-    int a = 2;
-    int b = 5;
+string encrypt(int kluch, string slovo){
+    for (int i = 0; i <= slovo.size(); i = i + 1) { //проходимся по каждому символу слова
+        if (slovo[i] + kluch <= 'z' and slovo[i] >= 'a') {
+            slovo[i] = slovo[i] + kluch;
+        } else if (slovo[i] + kluch > 'z' and slovo[i] >= 'a'){ //если при смещении буквы она доходит до конца алфавита перемещаем её в начало
+            slovo[i] = slovo[i] + kluch - 26;
+        }
+    }
+    return slovo;
+}
 
-    std::cout << a + b << std::endl;
+int main() {
+    int n = 0;
+    std::cin >> n;
+    n = n % 26;
+    string s = "hello";
+    getline(cin, s);
+    std::cout << encrypt(n, s) << std::endl;
+    return 0;
 }

@@ -13,5 +13,4 @@ add_executable(fmsh_chernyaev
         .idea/workspace.xml
         main.cpp
         main.h
-        B.cpp
         B.h)
