@@ -30,7 +30,8 @@ int main() {
     n = n % 26; //на случай если смещение больше чем букв в алфавите (например если смещение равно 29, то это то же самое что смещение на 3)
     string s = "hello";
     cin >> s;
-    std::cout << encrypt(n, s) << std::endl;
-    std::cout << decrypt(n, s) << std::endl;
+    auto enc_S = encrypt(n, s);
+    std::cout << enc_S << std::endl;
+    std::cout << decrypt(n, enc_S) << std::endl;
     return 0;
 }
