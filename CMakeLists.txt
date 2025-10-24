@@ -11,6 +11,9 @@ add_executable(fmsh_chernyaev
         .idea/modules.xml
         .idea/vcs.xml
         .idea/workspace.xml
-        main.cpp
+        taskB.cpp
         main.h
-        B.h)
+        B.h
+        funkciya.cpp
+        funkciya.h
+        main.cpp)
