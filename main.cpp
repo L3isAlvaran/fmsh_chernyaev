@@ -7,4 +7,7 @@ int main() {
     string data = "СЛОВО";
     string key = "КЛЮЧИ";
     funcB(data, key);
+    // cout << "x";
+
+
 }
