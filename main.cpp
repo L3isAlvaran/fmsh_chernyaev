@@ -23,7 +23,6 @@ void reverse(int arr[], int size) {
 int main() {
     int arr1[7] = {1, 2, 3, 4, 5, 6, 7};
     reverse(arr1, 7);
-    return 0;
 }
 
 
