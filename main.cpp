@@ -1,29 +1,25 @@
-#include <algorithm>
-#include <string>
 #include <iostream>
-#include <funkciya.h>
 using namespace std;
 
-void Swap(int& a, int& b) {  // Changed return type to void
-    int temp = a;
-    a = b;
-    b = temp;
-}
+struct Student {
+    string profile;
+    int room;
 
-void reverse(int arr[], int size) {
-    for (int i = 0; i < size/2; i++) {
-        Swap(arr[i], arr[size-1-i]);
+    void lubimie_olympiady(string olProfile) {
+        if (olProfile == "fizmat") {
+            cout << "math and phys" << endl;
+        } else if (olProfile == "himbio") {
+            cout << "chem and bio" << endl;
+        }
     }
-    for (int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
+    void obuchaetsya_li_etot_student_v_10_2(int studentsRoom) {
+         (402 < studentsRoom and studentsRoom < 412) ? (cout << "yes") : (cout << "no");
     }
-    cout << endl;
+};
+
+int main(){
+    Student student = {"fizmat", 406};
+    student.lubimie_olympiady("fizmat");
+    student.obuchaetsya_li_etot_student_v_10_2(406);
 }
-
-int main() {
-    int arr1[7] = {1, 2, 3, 4, 5, 6, 7};
-    reverse(arr1, 7);
-}
-
-
 
